@@ -1,4 +1,6 @@
 import { Routes, Route } from "react-router-dom";
+import { Analytics } from "@vercel/analytics/react";
+
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 
@@ -7,25 +9,27 @@ import Docs from "./pages/Docs";
 import Installation from "./pages/Installation";
 import Usage from "./pages/Usage";
 import Tailwind from "./pages/Tailwind";
-import { Analytics } from "@vercel/analytics/next"
 
 export default function App() {
   return (
-    <div className="min-h-screen flex flex-col">
+    <div className="min-h-dvh flex flex-col bg-gray-100">
       <Navbar />
 
-      <main className="flex-1 bg-gray-100">
+      <main className="flex-1">
         <Routes>
           <Route path="/" element={<Home />} />
+
           <Route path="/docs" element={<Docs />} />
           <Route path="/docs/installation" element={<Installation />} />
           <Route path="/docs/usage" element={<Usage />} />
           <Route path="/docs/tailwind" element={<Tailwind />} />
         </Routes>
-        <Analytics />
       </main>
 
       <Footer />
+
+      {/* Vercel Analytics */}
+      <Analytics />
     </div>
   );
 }
