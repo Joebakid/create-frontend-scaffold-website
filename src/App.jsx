@@ -7,6 +7,7 @@ import Docs from "./pages/Docs";
 import Installation from "./pages/Installation";
 import Usage from "./pages/Usage";
 import Tailwind from "./pages/Tailwind";
+import { Analytics } from "@vercel/analytics/next"
 
 export default function App() {
   return (
@@ -21,6 +22,7 @@ export default function App() {
           <Route path="/docs/usage" element={<Usage />} />
           <Route path="/docs/tailwind" element={<Tailwind />} />
         </Routes>
+        <Analytics />
       </main>
 
       <Footer />

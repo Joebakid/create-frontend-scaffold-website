@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import CodeBlock from "../components/CodeBlock";
 
 export default function Home() {
   return (
@@ -15,7 +16,7 @@ export default function Home() {
       <div className="mt-8 flex gap-4">
         <Link
           to="/docs/installation"
-          className="px-6 py-3 bg-black text-white rounded-lg"
+          className=" py-2 px-2 bg-black text-white rounded-lg"
         >
           Get Started
         </Link>
@@ -23,14 +24,15 @@ export default function Home() {
         <a
           href="https://github.com/Joebakid/create-bawo-frontend"
           target="_blank"
-          className="px-6 py-3 border rounded-lg"
+          className="px-2 py-2 border rounded-lg"
         >
           GitHub
         </a>
       </div>
 
-      <pre className="mt-12 p-4 bg-zinc-900 text-white rounded-lg">
-        <code>npx create-bawo-frontend my-app</code>
+      <pre className="mt-12   bg-zinc-900 rounded-lg">
+        {/* <code>npx create-bawo-frontend my-app</code> */}
+        <CodeBlock code="npx create-bawo-frontend my-app" />
       </pre>
     </section>
   );

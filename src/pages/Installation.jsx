@@ -1,8 +1,10 @@
 import CodeBlock from "../components/CodeBlock";
+import GoBack from "../components/GoBack";
 
 export default function Installation() {
   return (
     <div className="max-w-4xl mx-auto px-6 py-16">
+      <GoBack />
       <h1 className="text-3xl font-bold uppercase">Installation</h1>
 
       <p className="mt-4 text-gray-600">

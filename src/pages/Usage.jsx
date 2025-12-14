@@ -1,6 +1,10 @@
+import CodeBlock from "../components/CodeBlock";
+import GoBack from "../components/GoBack";
+
 export default function Usage() {
   return (
     <div className="max-w-4xl mx-auto px-6 py-16">
+      <GoBack />
       <h1 className="text-3xl font-bold">Usage</h1>
 
       <p className="mt-4 text-gray-600">
@@ -16,13 +20,11 @@ export default function Usage() {
           Scaffold a new project using the interactive CLI:
         </p>
 
-        <pre className="mt-4 p-4 rounded-lg bg-zinc-900 text-zinc-100 overflow-x-auto">
-          <code>npx create-bawo-frontend my-app</code>
+        <pre className="mt-4 p-0 rounded-lg bg-zinc-900">
+          <CodeBlock code="npx create-bawo-frontend my-app" />
         </pre>
 
-        <p className="mt-3 text-gray-600">
-          You will be prompted to choose:
-        </p>
+        <p className="mt-3 text-gray-600">You will be prompted to choose:</p>
 
         <ul className="mt-2 list-disc list-inside text-gray-600">
           <li>Framework (React + Vite or Next.js)</li>
@@ -41,8 +43,8 @@ export default function Usage() {
           Skip all prompts and scaffold using default options:
         </p>
 
-        <pre className="mt-4 p-4 rounded-lg bg-zinc-900 text-zinc-100 overflow-x-auto">
-          <code>npx create-bawo-frontend my-app -y</code>
+        <pre className="mt-4 p-0 rounded-lg bg-zinc-900">
+          <CodeBlock code="npx create-bawo-frontend my-app -y" />
         </pre>
 
         <p className="mt-3 text-gray-600">
@@ -59,12 +61,14 @@ export default function Usage() {
           <code className="px-1 mx-1 bg-gray-200 rounded">--framework</code> flag:
         </p>
 
-        <pre className="mt-4 p-4 rounded-lg bg-zinc-900 text-zinc-100 overflow-x-auto">
-          <code>{`# React + Vite
+        <pre className="mt-4 p-0 rounded-lg bg-zinc-900">
+          <CodeBlock
+            code={`# React + Vite
 npx create-bawo-frontend my-app --framework react
 
 # Next.js (App Router)
-npx create-bawo-frontend my-app --framework next`}</code>
+npx create-bawo-frontend my-app --framework next`}
+          />
         </pre>
       </section>
 
@@ -77,8 +81,8 @@ npx create-bawo-frontend my-app --framework next`}</code>
           <code className="px-1 mx-1 bg-gray-200 rounded">--ts</code> flag:
         </p>
 
-        <pre className="mt-4 p-4 rounded-lg bg-zinc-900 text-zinc-100 overflow-x-auto">
-          <code>npx create-bawo-frontend my-app --ts</code>
+        <pre className="mt-4 p-0 rounded-lg bg-zinc-900">
+          <CodeBlock code="npx create-bawo-frontend my-app --ts" />
         </pre>
       </section>
 
@@ -110,8 +114,8 @@ npx create-bawo-frontend my-app --framework next`}</code>
           Add shadcn/ui during setup for a preconfigured component system:
         </p>
 
-        <pre className="mt-4 p-4 rounded-lg bg-zinc-900 text-zinc-100 overflow-x-auto">
-          <code>npx create-bawo-frontend my-app --ui shadcn</code>
+        <pre className="mt-4 p-0 rounded-lg bg-zinc-900">
+          <CodeBlock code="npx create-bawo-frontend my-app --ui shadcn" />
         </pre>
       </section>
 
@@ -123,12 +127,14 @@ npx create-bawo-frontend my-app --framework next`}</code>
           Optional animation libraries can be added with demo components:
         </p>
 
-        <pre className="mt-4 p-4 rounded-lg bg-zinc-900 text-zinc-100 overflow-x-auto">
-          <code>{`# Framer Motion
+        <pre className="mt-4 p-0 rounded-lg bg-zinc-900">
+          <CodeBlock
+            code={`# Framer Motion
 npx create-bawo-frontend my-app --framer
 
 # GSAP
-npx create-bawo-frontend my-app --gsap`}</code>
+npx create-bawo-frontend my-app --gsap`}
+          />
         </pre>
       </section>
 
@@ -141,8 +147,8 @@ npx create-bawo-frontend my-app --gsap`}</code>
           To prevent this behavior, use:
         </p>
 
-        <pre className="mt-4 p-4 rounded-lg bg-zinc-900 text-zinc-100 overflow-x-auto">
-          <code>npx create-bawo-frontend my-app --no-start</code>
+        <pre className="mt-4 p-0 rounded-lg bg-zinc-900">
+          <CodeBlock code="npx create-bawo-frontend my-app --no-start" />
         </pre>
       </section>
     </div>

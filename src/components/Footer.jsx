@@ -7,7 +7,7 @@ export default function Footer() {
           href="https://www.josephbawo.tech"
           target="_blank"
           rel="noopener noreferrer"
-          className="font-medium text-gray-700 hover:underline"
+          className="font-medium text-gray-700 underline"
         >
           Joseph Bawo
         </a>{" "}
