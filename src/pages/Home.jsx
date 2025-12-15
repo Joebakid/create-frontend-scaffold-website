@@ -4,7 +4,7 @@ import CodeBlock from "../components/CodeBlock";
 export default function Home() {
   return (
     <section className="max-w-6xl mx-auto px-6 py-24">
-      <h1 className="text-5xl font-bold">
+      <h1 className="text-5xl font-bold uppercase">
         create-bawo-frontend
       </h1>
 

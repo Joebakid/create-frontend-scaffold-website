@@ -5,7 +5,7 @@ export default function Usage() {
   return (
     <div className="max-w-4xl mx-auto px-6 py-16">
       <GoBack />
-      <h1 className="text-3xl font-bold">Usage</h1>
+      <h1 className="text-3xl font-bold uppercase">Usage</h1>
 
       <p className="mt-4 text-gray-600">
         This section covers common usage patterns and examples for
@@ -123,19 +123,24 @@ npx create-bawo-frontend my-app --framework next`}
       <section className="mt-10">
         <h2 className="text-xl font-semibold">Animations</h2>
 
-        <p className="mt-3 text-gray-600">
+        <p className=" text-gray-600">
           Optional animation libraries can be added with demo components:
         </p>
 
-        <pre className="mt-4 p-0 rounded-lg bg-zinc-900">
+       
           <CodeBlock
             code={`# Framer Motion
 npx create-bawo-frontend my-app --framer
-
+ `}
+          />
+          
+ 
+            <CodeBlock
+            code={` 
 # GSAP
 npx create-bawo-frontend my-app --gsap`}
           />
-        </pre>
+        
       </section>
 
       {/* Dev server */}

@@ -17,7 +17,7 @@ export default function CopyButton({ text }) {
     <button
       onClick={handleCopy}
       className="absolute top-3 right-3 rounded-md border px-3 py-1 text-xs
-                 bg-white/80 backdrop-blur hover:bg-white
+                 bg-white/80 backdrop-blur hover:bg-white cursor-pointer
                  transition"
       aria-label="Copy code"
     >
