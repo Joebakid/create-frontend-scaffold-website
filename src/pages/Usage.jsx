@@ -8,82 +8,112 @@ export default function Usage() {
       <h1 className="text-3xl font-bold uppercase">Usage</h1>
 
       <p className="mt-4 text-gray-600">
-        This section covers common usage patterns and examples for
-        <strong> create-bawo-frontend</strong>.
+        <strong>create-bawo-frontend</strong> is a flexible CLI for scaffolding
+        modern React (Vite) or Next.js applications with Tailwind CSS, state
+        management, animations, and tooling — all configurable via flags or
+        interactive prompts.
       </p>
+
+      {/* Installation */}
+      <section className="mt-10">
+        <h2 className="text-xl font-semibold">Installation</h2>
+
+        <p className="mt-3 text-gray-600">
+          No installation is required. Run the CLI directly using <code>npx</code>:
+        </p>
+
+        <CodeBlock code="npx create-bawo-frontend my-app" />
+      </section>
 
       {/* Basic usage */}
       <section className="mt-10">
         <h2 className="text-xl font-semibold">Basic usage</h2>
 
         <p className="mt-3 text-gray-600">
-          Scaffold a new project using the interactive CLI:
+          Run the command without flags to enter interactive mode:
         </p>
 
-        <pre className="mt-4 p-0 rounded-lg bg-zinc-900">
-          <CodeBlock code="npx create-bawo-frontend my-app" />
-        </pre>
+        <CodeBlock code="npx create-bawo-frontend my-app" />
 
-        <p className="mt-3 text-gray-600">You will be prompted to choose:</p>
+        <p className="mt-3 text-gray-600">
+          You will be prompted to choose:
+        </p>
 
         <ul className="mt-2 list-disc list-inside text-gray-600">
           <li>Framework (React + Vite or Next.js)</li>
-          <li>TypeScript or JavaScript</li>
+          <li>JavaScript or TypeScript</li>
           <li>State management solution</li>
           <li>Data fetching libraries</li>
-          <li>UI and animation presets</li>
+          <li>UI presets (shadcn/ui)</li>
+          <li>Animation libraries (Framer Motion, GSAP)</li>
         </ul>
       </section>
 
       {/* Quick mode */}
       <section className="mt-10">
-        <h2 className="text-xl font-semibold">Quick mode</h2>
+        <h2 className="text-xl font-semibold">Quick mode (non-interactive)</h2>
 
         <p className="mt-3 text-gray-600">
-          Skip all prompts and scaffold using default options:
+          Skip all prompts and scaffold using defaults:
         </p>
 
-        <pre className="mt-4 p-0 rounded-lg bg-zinc-900">
-          <CodeBlock code="npx create-bawo-frontend my-app -y" />
-        </pre>
+        <CodeBlock code="npx create-bawo-frontend my-app -y" />
 
         <p className="mt-3 text-gray-600">
-          This is useful for rapid prototyping or CI environments.
+          This is ideal for automation, CI pipelines, or fast prototyping.
         </p>
       </section>
 
-      {/* Framework selection */}
+      {/* Framework */}
       <section className="mt-10">
-        <h2 className="text-xl font-semibold">Choosing a framework</h2>
+        <h2 className="text-xl font-semibold">Framework selection</h2>
 
         <p className="mt-3 text-gray-600">
-          You can explicitly choose a framework using the
-          <code className="px-1 mx-1 bg-gray-200 rounded">--framework</code> flag:
+          Choose the framework explicitly using the
+          <code className="px-1 mx-1 bg-gray-200 rounded">--framework</code> flag.
         </p>
 
-        <pre className="mt-4 p-0 rounded-lg bg-zinc-900">
-          <CodeBlock
-            code={`# React + Vite
+        <CodeBlock
+          code={`# React + Vite
 npx create-bawo-frontend my-app --framework react
 
 # Next.js (App Router)
 npx create-bawo-frontend my-app --framework next`}
-          />
-        </pre>
+        />
       </section>
 
       {/* TypeScript */}
       <section className="mt-10">
-        <h2 className="text-xl font-semibold">Using TypeScript</h2>
+        <h2 className="text-xl font-semibold">TypeScript</h2>
 
         <p className="mt-3 text-gray-600">
-          Add TypeScript support with the
-          <code className="px-1 mx-1 bg-gray-200 rounded">--ts</code> flag:
+          Enable TypeScript by passing the
+          <code className="px-1 mx-1 bg-gray-200 rounded">--ts</code> flag.
         </p>
 
-        <pre className="mt-4 p-0 rounded-lg bg-zinc-900">
-          <CodeBlock code="npx create-bawo-frontend my-app --ts" />
-        </pre>
+        <CodeBlock code="npx create-bawo-frontend my-app --ts" />
+
+        <p className="mt-3 text-gray-600">
+          This generates TypeScript configuration files and uses
+          <code>.ts</code>/<code>.tsx</code> throughout the project.
+        </p>
+      </section>
+
+      {/* Tailwind */}
+      <section className="mt-10">
+        <h2 className="text-xl font-semibold">Tailwind CSS</h2>
+
+        <p className="mt-3 text-gray-600">
+          Tailwind CSS v3 is enabled by default. You can explicitly opt into
+          Tailwind v4 using:
+        </p>
+
+        <CodeBlock code="npx create-bawo-frontend my-app --tailwind v4" />
+
+        <p className="mt-3 text-gray-600">
+          Tailwind v4 uses the new Vite plugin and does not include
+          <code>autoprefixer</code>.
+        </p>
       </section>
 
       {/* State management */}
@@ -91,19 +121,34 @@ npx create-bawo-frontend my-app --framework next`}
         <h2 className="text-xl font-semibold">State management</h2>
 
         <p className="mt-3 text-gray-600">
-          During setup, you can select one primary state management library:
+          Choose one primary state management solution:
         </p>
 
-        <ul className="mt-2 list-disc list-inside text-gray-600">
-          <li>None</li>
-          <li>Zustand (lightweight)</li>
-          <li>Redux Toolkit</li>
-        </ul>
+        <CodeBlock
+          code={`# Zustand (lightweight)
+npx create-bawo-frontend my-app --zustand
+
+# Redux Toolkit
+npx create-bawo-frontend my-app --redux`}
+        />
 
         <p className="mt-3 text-gray-600">
-          Additional data libraries such as RTK Query, React Query, SWR, and
-          Context API can also be added.
+          You can also add data-layer libraries:
         </p>
+
+        <CodeBlock
+          code={`# RTK Query
+npx create-bawo-frontend my-app --rtk-query
+
+# React Query (TanStack)
+npx create-bawo-frontend my-app --react-query
+
+# SWR
+npx create-bawo-frontend my-app --swr
+
+# Context API
+npx create-bawo-frontend my-app --context`}
+        />
       </section>
 
       {/* UI */}
@@ -111,51 +156,64 @@ npx create-bawo-frontend my-app --framework next`}
         <h2 className="text-xl font-semibold">UI presets</h2>
 
         <p className="mt-3 text-gray-600">
-          Add shadcn/ui during setup for a preconfigured component system:
+          Add <strong>shadcn/ui</strong> with a preconfigured setup:
         </p>
 
-        <pre className="mt-4 p-0 rounded-lg bg-zinc-900">
-          <CodeBlock code="npx create-bawo-frontend my-app --ui shadcn" />
-        </pre>
+        <CodeBlock code="npx create-bawo-frontend my-app --ui shadcn" />
+
+        <p className="mt-3 text-gray-600">
+          Note: shadcn/ui is currently supported with Tailwind v3 only.
+        </p>
       </section>
 
       {/* Animations */}
       <section className="mt-10">
         <h2 className="text-xl font-semibold">Animations</h2>
 
-        <p className=" text-gray-600">
-          Optional animation libraries can be added with demo components:
+        <p className="mt-3 text-gray-600">
+          Add animation libraries with optional demo components:
         </p>
 
-       
-          <CodeBlock
-            code={`# Framer Motion
+        <CodeBlock
+          code={`# Framer Motion
 npx create-bawo-frontend my-app --framer
- `}
-          />
-          
- 
-            <CodeBlock
-            code={` 
+
 # GSAP
-npx create-bawo-frontend my-app --gsap`}
-          />
-        
+npx create-bawo-frontend my-app --gsap
+
+# Both
+npx create-bawo-frontend my-app --framer --gsap`}
+        />
       </section>
 
       {/* Dev server */}
       <section className="mt-10">
-        <h2 className="text-xl font-semibold">Starting the dev server</h2>
+        <h2 className="text-xl font-semibold">Development server</h2>
 
         <p className="mt-3 text-gray-600">
-          By default, the CLI can automatically start the development server.
-          To prevent this behavior, use:
+          By default, the CLI can start the dev server automatically.
+          Disable this behavior using:
         </p>
 
-        <pre className="mt-4 p-0 rounded-lg bg-zinc-900">
-          <CodeBlock code="npx create-bawo-frontend my-app --no-start" />
-        </pre>
+        <CodeBlock code="npx create-bawo-frontend my-app --no-start" />
       </section>
+
+
+
+       <section className="mt-10">
+  <h2 className="text-xl font-semibold">My Go-to setup</h2>
+
+  <p className="mt-3 text-gray-600">
+    This is my preferred setup for most projects. It combines TypeScript,
+    Tailwind v4, GSAP, Framer Motion, and Redux Toolkit on Next.js for a
+    scalable and production-ready workflow.
+  </p>
+
+  <CodeBlock
+    code="npx create-bawo-frontend my-app --framework next --ts --tailwind v4 --redux --gsap --framer -y"
+  />
+</section>
+
     </div>
   );
 }
