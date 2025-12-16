@@ -9,6 +9,8 @@ import Docs from "./pages/Docs";
 import Installation from "./pages/Installation";
 import Usage from "./pages/Usage";
 import Tailwind from "./pages/Tailwind";
+import NotFound from "./pages/NotFound";
+import ReleaseNotes from "./pages/ReleaseNote";
 
 export default function App() {
   return (
@@ -23,6 +25,8 @@ export default function App() {
           <Route path="/docs/installation" element={<Installation />} />
           <Route path="/docs/usage" element={<Usage />} />
           <Route path="/docs/tailwind" element={<Tailwind />} />
+          <Route path="/releasenotes" element={<ReleaseNotes />} />
+          <Route path="*" element={<NotFound />} />
         </Routes>
       </main>
 
