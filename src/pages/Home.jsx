@@ -16,7 +16,7 @@ export default function Home() {
       <div className="mt-8 flex gap-4">
         <Link
           to="/docs/installation"
-          className="  px-1 py-2 sm:px-2 bg-black text-white rounded-lg"
+          className="px-3 py-2 sm:px-2 bg-black text-white rounded-lg"
         >
           Get Started
         </Link>
@@ -24,7 +24,7 @@ export default function Home() {
         <a
           href="https://github.com/Joebakid/create-bawo-frontend"
           target="_blank"
-          className=" px-1 sm:px-2 py-2 border rounded-lg"
+          className="px-3 py-2 sm:px-2   border rounded-lg"
         >
           GitHub
         </a>
