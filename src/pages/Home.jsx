@@ -153,21 +153,18 @@ export default function Home() {
               <XMarkIcon className="w-6 h-6" />
             </button>
 
-            {/* LOCAL VIDEO */}
-            <video
-              src="/intro.mp4" // put video in /public
-              controls
-              autoPlay
-              className="w-full h-auto"
-            />
+           
 
-            {/* OR YOUTUBE (replace video above)
-            <iframe
-              className="w-full aspect-video"
-              src="https://www.youtube.com/embed/VIDEO_ID?autoplay=1"
-              allow="autoplay; fullscreen"
-            />
-            */}
+           
+         <iframe
+  className="w-full aspect-video"
+  src="https://www.youtube.com/embed/dfgqjcIJ9sw?autoplay=1"
+  title="What is create-bawo-frontend"
+  allow="autoplay; fullscreen; encrypted-media"
+  allowFullScreen
+/>
+
+            *
           </div>
         </div>
       )}
