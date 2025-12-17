@@ -33,7 +33,7 @@ export default function ReleaseNotes() {
 
   return (
     <section className="max-w-4xl mx-auto px-3 py-10 sm:px-6 sm:py-16">
-      <h1 className="text-3xl font-bold mb-8 uppercase">
+      <h1 className="text-xl sm:text-3xl font-bold mb-8 uppercase">
         Release Notes
       </h1>
 

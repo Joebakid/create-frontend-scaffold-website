@@ -6,7 +6,7 @@ export default function Docs() {
     <div className="max-w-6xl mx-auto px-6 py-16">
 
 <GoBack />
-      <h1 className="text-3xl font-bold uppercase">Documentation</h1>
+      <h1 className="text-2xl sm:text-3xl font-bold uppercase">Documentation</h1>
 
       <ul className="mt-8 divide-y border rounded-lg">
         <li>

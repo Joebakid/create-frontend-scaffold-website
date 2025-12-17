@@ -11,6 +11,8 @@ import Usage from "./pages/Usage";
 import Tailwind from "./pages/Tailwind";
 import NotFound from "./pages/NotFound";
 import ReleaseNotes from "./pages/ReleaseNote";
+import Contribute from "./pages/Contribute";
+import Support from "./pages/Support";
 
 export default function App() {
   return (
@@ -26,6 +28,8 @@ export default function App() {
           <Route path="/docs/usage" element={<Usage />} />
           <Route path="/docs/tailwind" element={<Tailwind />} />
           <Route path="/releasenotes" element={<ReleaseNotes />} />
+          <Route path="/contribute" element={<Contribute />} />
+          <Route path="/support" element={<Support />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
       </main>

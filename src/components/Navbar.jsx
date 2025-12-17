@@ -20,6 +20,12 @@ export default function Navbar() {
        
 
           <Link to="/docs">Docs</Link>
+           <Link onClick={() => setOpen(false)} to="/contribute">
+            Contribute
+          </Link>
+           <Link onClick={() => setOpen(false)} to="/support">
+           Support
+          </Link>
           <Link to="/releasenotes">Release Note</Link>
           <a
             href="https://github.com/Joebakid/create-bawo-frontend"
@@ -49,6 +55,9 @@ export default function Navbar() {
 
           <Link onClick={() => setOpen(false)} to="/docs">
             Docs
+          </Link>
+          <Link onClick={() => setOpen(false)} to="/contribute">
+            Contribute
           </Link>
           <Link onClick={() => setOpen(false)} to="/releasenotes">
             Release Note

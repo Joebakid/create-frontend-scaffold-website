@@ -85,16 +85,16 @@ export default function Home() {
         <div className="my-10 flex-col flex sm:flex-row items-center gap-4">
           <button
             onClick={() => setVideoOpen(true)}
-            className="border px-5 py-1.5 rounded-lg flex items-center gap-2.5 hover:bg-gray-50"
+            className="border px-5 py-1.5 rounded-lg flex items-center gap-2.5 hover:bg-gray-50 cursor-pointer"
           >
             What is create-bawo-frontend
             <PlayIcon className="h-5 w-5 text-gray-500" />
           </button>
 
-<div className="flex space-x-5">
+<div className="flex space-x-5 justify-center items-center">
  <Link
             to="/docs/installation"
-            className="px-4 py-1.5 bg-black text-white rounded-lg"
+            className=" px-2 py-1.5 bg-black text-white rounded-lg"
           >
             Get Started
           </Link>
@@ -103,7 +103,7 @@ export default function Home() {
             href="https://github.com/Joebakid/create-bawo-frontend"
             target="_blank"
             rel="noreferrer"
-            className="px-4 py-1.5 border rounded-lg"
+            className=" px-2 py-1  border rounded-lg"
           >
             GitHub
           </a>
