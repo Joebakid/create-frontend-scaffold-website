@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 import { useState } from "react";
 import CodeBlock from "../components/CodeBlock";
+import Review from '../components/Review'
 import {
   BoltIcon,
   CubeIcon,
@@ -134,6 +135,10 @@ export default function Home() {
             </div>
           ))}
         </div>
+      </section>
+
+      <section>
+      <Review/>
       </section>
 
       {/* VIDEO MODAL */}

@@ -14,6 +14,7 @@ import ReleaseNotes from "./pages/ReleaseNote";
 import Contribute from "./pages/Contribute";
 import Support from "./pages/Support";
 
+
 export default function App() {
   return (
     <div className="min-h-dvh flex flex-col bg-gray-100">
