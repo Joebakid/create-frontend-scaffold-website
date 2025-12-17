@@ -59,6 +59,9 @@ export default function Navbar() {
           <Link onClick={() => setOpen(false)} to="/contribute">
             Contribute
           </Link>
+           <Link onClick={() => setOpen(false)} to="/support">
+           Support
+          </Link>
           <Link onClick={() => setOpen(false)} to="/releasenotes">
             Release Note
           </Link>
