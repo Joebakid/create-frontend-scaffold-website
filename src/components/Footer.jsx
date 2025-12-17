@@ -25,6 +25,14 @@ export default function Footer() {
             GitHub
           </a>
           <a
+            href="https://www.npmjs.com/package/create-bawo-frontend"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="hover:text-gray-700"
+          >
+            npmjs
+          </a>
+          <a
             href="/docs"
             className="hover:text-gray-700"
           >
