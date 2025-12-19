@@ -56,14 +56,21 @@ export default function Support() {
   }
 
   return (
-    <section className="max-w-2xl mx-auto px-6 py-24">
+    <section className="max-w-5xl mx-auto px-6 py-24">
       <h1 className="text-4xl font-bold uppercase">
         Support the Project
       </h1>
 
       <p className="mt-4 text-gray-600">
-        create-bawo-frontend is built and maintained independently.
-        If it has saved you time, consider supporting it with ETH.
+       Everyone is an artist until it’s time to pay the bills.
+
+create-bawo-frontend is built and maintained independently, driven purely by passion for open-source and developer experience. I genuinely want to invest more time, features, and long-term support into this project.
+
+However, like many independent builders, I’m constrained by basic realities rent, food, internet, and daily living costs. These needs limit how much time I can sustainably dedicate without financial support.
+
+If this project has helped you, inspired you, or saved you time, any form of support, contributions, sponsorships, or paid collaborations  directly helps keep it alive and improving.
+
+Open source survives on people, not just code.
       </p>
 
       {/* MAIN SUPPORT BOX */}

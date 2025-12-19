@@ -23,7 +23,7 @@ const features = [
     icon: BoltIcon,
   },
   {
-    title: "Vite & Next.js Support",
+    title: "Vite & Next.js + Vue Support",
     description:
       "Choose between Vite (React) or Next.js during setup, both optimized with best-practice defaults.",
     icon: CubeIcon,
@@ -78,8 +78,7 @@ export default function Home() {
         </h1>
 
         <p className="mt-6 text-md sm:text-xl text-gray-600 max-w-2xl">
-          A zero-config CLI to scaffold modern React (Vite) and Next.js apps
-          with Tailwind CSS, state management, animations, and best practices.
+          A zero-config CLI to scaffold modern React (Vite), Next.js, and Vue apps with Tailwind CSS, state management, animations, and best practices.
         </p>
 
         {/* ACTIONS */}
