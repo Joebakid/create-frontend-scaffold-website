@@ -3,6 +3,7 @@
   "private": true,
   "version": "0.0.0",
   "dependencies": {
+    "@fontsource/inter": "^5.2.8",
     "@heroicons/react": "^2.2.0",
     "@vercel/analytics": "^1.6.1",
     "react": "^19.2.3",

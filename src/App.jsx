@@ -17,7 +17,7 @@ import Support from "./pages/Support";
 
 export default function App() {
   return (
-    <div className="min-h-dvh flex flex-col bg-gray-100">
+    <div className="min-h-dvh flex flex-col bg-gray-100 font-sans">
       <Navbar />
 
       <main className="flex-1">

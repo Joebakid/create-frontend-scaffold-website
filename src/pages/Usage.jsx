@@ -129,7 +129,11 @@ npx create-bawo-frontend my-app --framework next`}
 npx create-bawo-frontend my-app --zustand
 
 # Redux Toolkit
-npx create-bawo-frontend my-app --redux`}
+npx create-bawo-frontend my-app --redux
+
+# Pinia [vue]
+npx create-bawo-frontend my-app --pinia
+`}
         />
 
         <p className="mt-3 text-gray-600">
