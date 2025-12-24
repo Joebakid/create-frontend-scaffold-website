@@ -2,6 +2,32 @@ import { useState } from "react";
 
 const releaseNotes = [
   {
+  id: "v3.0.0",
+  title: "create-bawo-frontend v3.0.0",
+  date: "December 2025",
+  content: {
+    scaffold: [
+      "Introduced Vue 3 + Vite scaffolding support",
+      "Added Tailwind CSS v3 integration for Vue projects",
+      "Added GSAP pre-configuration for Vue animations",
+      "Introduced Vue state management setup (Pinia)",
+      "Optimized Vue project structure for scalability",
+    ],
+    dx: [
+      "Zero-config Vue setup with sensible defaults",
+      "Cleaner Vue starter components and layout",
+      "Unified developer experience across React, Next.js, and Vue",
+      "Reduced manual configuration after project creation",
+    ],
+    fixes: [
+      "Resolved Tailwind CSS setup issues in Vue templates",
+      "Fixed GSAP import and usage conflicts in Vue projects",
+      "Aligned Vue configuration with existing CLI standards",
+    ],
+  },
+}
+,
+  {
     id: "v2.2.1",
     title: "create-bawo-frontend v2.2.1",
     date: "December 2025",
@@ -24,7 +50,8 @@ const releaseNotes = [
       ],
     },
   },
-  // 👉 future releases go here
+
+
 ];
 
 
@@ -32,7 +59,7 @@ export default function ReleaseNotes() {
   const [openId, setOpenId] = useState(null);
 
   return (
-    <section className="max-w-4xl mx-auto px-3 py-10 sm:px-6 sm:py-16">
+    <section className="max-w-4xl mx-auto px-3 py-10 sm:px-6 sm:py-16 transition-all">
       <h1 className="text-xl sm:text-3xl font-bold mb-8 uppercase">
         Release Notes
       </h1>
