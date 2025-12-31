@@ -13,6 +13,7 @@ import NotFound from "./pages/NotFound";
 import ReleaseNotes from "./pages/ReleaseNote";
 import Contribute from "./pages/Contribute";
 import Support from "./pages/Support";
+import Node from './pages/node'
 
 
 export default function App() {
@@ -31,6 +32,7 @@ export default function App() {
           <Route path="/releasenotes" element={<ReleaseNotes />} />
           <Route path="/contribute" element={<Contribute />} />
           <Route path="/support" element={<Support />} />
+          <Route path="/docs/node" element={<Node />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
       </main>

@@ -14,7 +14,7 @@ export default function Docs() {
             to="/docs/installation"
             className="flex items-center justify-between px-5 py-4 text-lg font-medium hover:bg-gray-200 transition-all  rounded-lg "
           >
-            <span>📦 Installation</span>
+            <span>Installation</span>
             <span className="text-gray-400">→</span>
           </Link>
         </li>
@@ -24,7 +24,7 @@ export default function Docs() {
             to="/docs/usage"
             className="flex items-center justify-between px-5 py-4 text-lg font-medium hover:bg-gray-200 transition-all"
           >
-            <span>🚀 Usage</span>
+            <span>Usage</span>
             <span className="text-gray-400">→</span>
           </Link>
         </li>
@@ -34,7 +34,17 @@ export default function Docs() {
             to="/docs/tailwind"
             className="flex items-center justify-between px-5 py-4 text-lg font-medium hover:bg-gray-200  rounded-lg transition-all"
           >
-            <span>🎨 Tailwind CSS (v3 & v4)</span>
+            <span>Tailwind CSS (v3 & v4)</span>
+            <span className="text-gray-400">→</span>
+          </Link>
+        </li>
+
+          <li>
+          <Link
+            to="/docs/node"
+            className="flex items-center justify-between px-5 py-4 text-lg font-medium hover:bg-gray-200  rounded-lg transition-all"
+          >
+            <span>Node Version</span>
             <span className="text-gray-400">→</span>
           </Link>
         </li>
