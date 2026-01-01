@@ -1,6 +1,38 @@
 import { useState } from "react";
 
 const releaseNotes = [
+
+
+  {
+  id: "v3.4.0-beta-fonts",
+  title: "create-bawo-frontend v3.4.0 (Font Support — Beta)",
+  date: "January 2026",
+  content: {
+    scaffold: [
+      "Introduced font support system (Beta)",
+      "Added font registry and installer for project-wide typography",
+      "Enabled automatic font injection into Tailwind configuration",
+      "Added CLI option for selecting fonts during scaffolding",
+    ],
+    dx: [
+      "Consistent typography across React, Next.js, and Vue projects",
+      "Reduced manual font setup and configuration",
+      "Fonts applied automatically without additional user steps",
+      "Improved developer experience for branding and UI consistency",
+    ],
+    fixes: [
+      "Prevented duplicate font imports during scaffolding",
+      "Improved font injection reliability across frameworks",
+      "Minor fixes to Tailwind font configuration handling",
+    ],
+    notes: [
+      "Font support is currently in beta",
+      "APIs and CLI flags may change in future releases",
+      "Recommended for experimentation, not yet finalized for production use",
+    ],
+  },
+}
+,
   {
   id: "v3.0.0",
   title: "create-bawo-frontend v3.0.0",
@@ -59,26 +91,26 @@ export default function ReleaseNotes() {
   const [openId, setOpenId] = useState(null);
 
   return (
-    <section className="max-w-4xl mx-auto px-3 py-10 sm:px-6 sm:py-16 transition-all">
+    <section className="max-w-4xl mx-auto px-3 py-10 sm:px-6 sm:py-16 transition-all ">
       <h1 className="text-xl sm:text-3xl font-bold mb-8 uppercase">
         Release Notes
       </h1>
 
-      <ul className="space-y-4">
+      <ul className="space-y-4 ">
         {releaseNotes.map((release) => {
           const isOpen = openId === release.id;
 
           return (
             <li
               key={release.id}
-              className="border rounded-lg"
+              className="border rounded-lg "
             >
               {/* LIST HEADER */}
               <button
                 onClick={() =>
                   setOpenId(isOpen ? null : release.id)
                 }
-                className="w-full flex justify-between items-center px-5 py-4 text-left"
+                className="w-full flex justify-between items-center px-5 py-4 text-left cursor-pointer"
               >
                 <div>
                   <h2 className="font-semibold text-md">
@@ -98,15 +130,15 @@ export default function ReleaseNotes() {
               {isOpen && (
                 <div className="px-5 pb-6 space-y-6 text-sm">
                   <Section
-                    title="🧱 Scaffold Updates"
+                    title="Scaffold Updates"
                     items={release.content.scaffold}
                   />
                   <Section
-                    title="⚙️ Developer Experience"
+                    title="Developer Experience"
                     items={release.content.dx}
                   />
                   <Section
-                    title="🐛 Fixes"
+                    title="Fixes"
                     items={release.content.fixes}
                   />
                 </div>
