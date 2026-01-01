@@ -19,11 +19,11 @@ export default function Contribute() {
   <section>
     <h2 className="text-xl font-semibold">How You Can Contribute</h2>
     <ul className="mt-4 list-disc list-inside text-gray-600 space-y-2">
-      <li>🐛 Report bugs or unexpected behavior</li>
-      <li>✨ Suggest or implement new features</li>
-      <li>🧱 Improve project structure or code quality</li>
-      <li>📖 Improve documentation or examples</li>
-      <li>🧪 Add tests or improve reliability</li>
+      <li>Report bugs or unexpected behavior</li>
+      <li>Suggest or implement new features</li>
+      <li>Improve project structure or code quality</li>
+      <li>Improve documentation or examples</li>
+      <li>Add tests or improve reliability</li>
     </ul>
   </section>
 
