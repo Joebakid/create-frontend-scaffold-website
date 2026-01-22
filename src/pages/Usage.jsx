@@ -141,6 +141,52 @@ npx create-bawo-frontend my-app --framework vue`}
         </p>
       </section>
 
+
+
+        {/* Fonts */}
+      <section className="mt-10">
+        <h2 className="text-xl font-semibold">Fonts</h2>
+
+        <p className="mt-3 text-gray-600">
+          The CLI includes a built-in font system. During interactive setup,
+          you can choose from a curated list of fonts. The selected font is
+          automatically installed, imported, and wired into your project.
+        </p>
+
+        <p className="mt-3 text-gray-600">
+          You can also select a font explicitly using the
+          <code className="px-1 mx-1 bg-gray-200 rounded">--font</code> flag:
+        </p>
+
+        <CodeBlock
+          code={`# Explicit font selection
+npx create-bawo-frontend my-app --font inter
+
+# Skip font selection (system default)
+npx create-bawo-frontend my-app --font none`}
+        />
+
+        <p className="mt-3 text-gray-600">
+          When Tailwind CSS is enabled, the font is automatically registered in
+          <code className="px-1 mx-1 bg-gray-200 rounded">tailwind.config</code>{" "}
+          and applied as the default <code>font-sans</code>.
+        </p>
+
+        <CodeBlock
+          code={`// Example usage in Tailwind
+<div className="font-sans">
+  Hello world
+</div>`}
+        />
+
+        <p className="mt-3 text-gray-600">
+          For non-Tailwind projects, the font is injected via global CSS and can
+          be used normally with <code>font-family</code>.
+        </p>
+
+      <b className="mt-5 text-sm">NOTE:</b>  <i className="text-sm"> If you skip font selection during the interactive setup, you can still specify a font later by passing the --font flag directly to the CLI. This allows you to control font configuration explicitly without re-running the interactive prompts, making it suitable for automation, CI workflows, or quick scaffolding.</i>
+      </section>
+
       {/* State management */}
       <section className="mt-10">
         <h2 className="text-xl font-semibold">State management</h2>
