@@ -2,8 +2,8 @@ import { useState } from "react";
 
 const releaseNotes = [
 {
-  id: "v3.5.0-dev-experience",
-  title: "create-bawo-frontend v3.5.0",
+  id: "v4.0.0-dev-experience",
+  title: "create-bawo-frontend v4.0.0",
   date: "March 2026",
   content: {
     scaffold: [

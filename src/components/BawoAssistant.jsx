@@ -1,5 +1,5 @@
 import { useState, useRef, useEffect } from "react";
-import { BsChatDotsFill } from "react-icons/bs";
+import { BsChatDotsFill, BsSend, BsX } from "react-icons/bs";
 import { FAQS } from "../data/faqs";
 
 const KEYWORDS = [
@@ -18,6 +18,7 @@ const KEYWORDS = [
 export default function BawoAssistant() {
 
   const [open, setOpen] = useState(false);
+  const [search, setSearch] = useState("");
 
   const [messages, setMessages] = useState([
     {
@@ -26,44 +27,42 @@ export default function BawoAssistant() {
     }
   ]);
 
-  const [search, setSearch] = useState("");
-
   const bottomRef = useRef(null);
 
-  function ask(faq) {
-    setMessages(prev => [
-      ...prev,
-      { role: "user", text: faq.question },
-      { role: "bot", text: faq.answer }
-    ]);
-  }
-
-  function runSearch(value) {
-    if (!value.trim()) return;
+  function sendMessage(text) {
+    if (!text.trim()) return;
 
     const match = FAQS.find(faq => {
-      const text = (faq.question + " " + faq.answer).toLowerCase();
-      return text.includes(value.toLowerCase());
+      const textBlock = (faq.question + " " + faq.answer).toLowerCase();
+      return textBlock.includes(text.toLowerCase());
     });
 
-    if (match) {
-      setMessages(prev => [
-        ...prev,
-        { role: "user", text: value },
-        { role: "bot", text: match.answer }
-      ]);
-    }
+    setMessages(prev => [
+      ...prev,
+      { role: "user", text },
+      {
+        role: "bot",
+        text: match
+          ? match.answer
+          : "Sorry, I couldn't find an answer for that."
+      }
+    ]);
+
+    setSearch("");
   }
 
   function handleKeyDown(e) {
     if (e.key === "Enter") {
-      runSearch(search);
+      sendMessage(search);
     }
   }
 
+  function ask(faq) {
+    sendMessage(faq.question);
+  }
+
   function useKeyword(word) {
-    setSearch(word);
-    runSearch(word);
+    sendMessage(word);
   }
 
   useEffect(() => {
@@ -81,7 +80,7 @@ export default function BawoAssistant() {
 
       <button
         onClick={() => setOpen(!open)}
-        className="fixed bottom-6 right-6 bg-black text-white w-14 h-14 rounded-full shadow-lg flex items-center justify-center text-xl"
+        className="fixed bottom-6 right-6 z-50 bg-black text-white w-14 h-14 rounded-full shadow-xl flex items-center justify-center text-xl"
       >
         <BsChatDotsFill />
       </button>
@@ -90,34 +89,61 @@ export default function BawoAssistant() {
 
       {open && (
 
-        <div className="fixed bottom-24 right-6 w-80 bg-white border rounded-xl shadow-xl flex flex-col">
+        <div className="
+          fixed
+          bottom-0
+          right-0
+          sm:bottom-24
+          sm:right-6
+          w-full
+          sm:w-80
+          h-[85vh]
+          sm:h-auto
+          bg-white
+          border
+          sm:rounded-xl
+          shadow-xl
+          flex
+          flex-col
+          z-50
+        ">
 
           {/* Header */}
 
-          <div className="p-3 border-b font-semibold">
-            Bawo Assistant
+          <div className="flex items-center justify-between p-3 border-b font-semibold">
+
+            <span>Bawo Assistant</span>
+
+            <button
+              onClick={() => setOpen(false)}
+              className="text-gray-500 hover:text-black"
+            >
+              <BsX />
+            </button>
+
           </div>
 
           {/* Messages */}
 
-          <div className="p-3 h-64 overflow-y-auto space-y-2 text-sm">
+          <div className="flex-1 p-3 overflow-y-auto space-y-3 text-sm">
 
             {messages.map((m, i) => (
 
               <div
                 key={i}
-                className={m.role === "user" ? "text-right" : "text-left"}
+                className={`flex ${m.role === "user" ? "justify-end" : "justify-start"}`}
               >
 
-                <span
-                  className={
-                    m.role === "user"
-                      ? "inline-block bg-black text-white px-3 py-1 rounded-lg"
-                      : "inline-block bg-gray-100 px-3 py-1 rounded-lg"
-                  }
+                <div
+                  className={`
+                    px-3 py-2 rounded-xl max-w-[80%]
+                    ${m.role === "user"
+                      ? "bg-black text-white"
+                      : "bg-gray-100"}
+                  `}
                 >
                   {m.text}
-                </span>
+                </div>
 
               </div>
 
@@ -127,17 +153,26 @@ export default function BawoAssistant() {
 
           </div>
 
-          {/* Search Input */}
+          {/* Search */}
 
-          <div className="border-t p-2">
+          <div className="border-t p-2 flex gap-2">
+
             <input
               type="text"
-              placeholder="Search and press Enter..."
+              placeholder="Ask a question..."
               value={search}
               onChange={(e) => setSearch(e.target.value)}
               onKeyDown={handleKeyDown}
-              className="w-full text-sm p-2 border rounded outline-none"
+              className="flex-1 text-sm p-2 border rounded outline-none"
             />
+
+            <button
+              onClick={() => sendMessage(search)}
+              className="bg-black text-white px-3 rounded"
+            >
+              <BsSend />
+            </button>
+
           </div>
 
           {/* Keyword Chips */}
@@ -149,7 +184,7 @@ export default function BawoAssistant() {
               <button
                 key={i}
                 onClick={() => useKeyword(word)}
-                className="text-xs px-2 py-1 rounded-full border hover:bg-gray-100"
+                className="text-xs px-3 py-1 rounded-full border hover:bg-gray-100"
               >
                 {word}
               </button>

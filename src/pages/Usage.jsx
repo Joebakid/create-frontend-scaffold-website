@@ -402,7 +402,7 @@ npx create-bawo-frontend my-app --framer --gsap`}
         </p>
 
         <CodeBlock
-          code="npx create-bawo-frontend my-app --framework next --ts --tailwind v4 --redux --gsap --framer -y"
+          code="npx create-bawo-frontend my-app --framework next --ts --tailwind v4 --redux --gsap --framer -y -supabase"
         />
       </section>
 
