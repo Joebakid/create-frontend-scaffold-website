@@ -1,4 +1,5 @@
 import { useNavigate } from "react-router-dom";
+import { FiArrowLeft } from "react-icons/fi";
 
 export default function GoBack() {
   const navigate = useNavigate();
@@ -6,9 +7,10 @@ export default function GoBack() {
   return (
     <button
       onClick={() => navigate(-1)}
-      className="flex item-center cursor-pointer justify-center mb-10 items-center gap-2 text-sm font-medium text-gray-600 hover:text-black transition"
+      className="flex items-center cursor-pointer justify-center mb-10 gap-2 text-sm font-medium text-gray-600 hover:text-black transition"
     >
-      ← Back
+      <FiArrowLeft size={16} />
+      Back
     </button>
   );
 }

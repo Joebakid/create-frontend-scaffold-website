@@ -2,6 +2,12 @@ import { Link } from "react-router-dom";
 import { useState } from "react";
 import CodeBlock from "../components/CodeBlock";
 import Review from '../components/Review'
+import { SiSvelte } from "react-icons/si";
+import { FaReact, FaVuejs } from "react-icons/fa";
+import { SiNextdotjs } from "react-icons/si";
+import { SiTailwindcss } from "react-icons/si";
+import { SiSupabase, SiFirebase, SiAppwrite, SiPocketbase } from "react-icons/si";
+import { SiFramer, SiGreensock } from "react-icons/si";
 import {
   BoltIcon,
   CubeIcon,
@@ -13,6 +19,7 @@ import {
   CloudArrowUpIcon,
   PlayIcon,
   XMarkIcon,
+  // WrenchScrewdriverIcon,
 } from "@heroicons/react/24/solid";
 
 const features = [
@@ -22,42 +29,42 @@ const features = [
       "Scaffold a production-ready frontend instantly with no manual setup or boilerplate configuration.",
     icon: BoltIcon,
   },
-  {
-    title: "Vite & Next.js + Vue Support",
-    description:
-      "Choose between Vite (React) or Next.js during setup, both optimized with best-practice defaults.",
-    icon: CubeIcon,
-  },
-  {
-    title: "Tailwind CSS Ready",
-    description:
-      "Preconfigured Tailwind CSS (v3 or v4) with PostCSS and autoprefixing.",
-    icon: AdjustmentsHorizontalIcon,
-  },
+{
+  title: "React, Next.js, Vue & Svelte Support",
+  description:
+    "Choose between React (Vite), Next.js, Vue, or Svelte during setup, all configured with modern best-practice defaults.",
+  icons: [FaReact, SiNextdotjs, FaVuejs, SiSvelte],
+},
+{
+  title: "Tailwind CSS Ready",
+  description:
+    "Preconfigured Tailwind CSS (v3 or v4) with PostCSS and autoprefixing.",
+  icon: SiTailwindcss,
+},
   {
     title: "State Management Included",
     description:
       "Optional Zustand or Redux Toolkit setup for scalable global state.",
     icon: SquaresPlusIcon,
   },
-  {
-    title: "Animation Support",
-    description:
-      "Framer Motion and GSAP support for smooth, modern UI animations.",
-    icon: SparklesIcon,
-  },
-  {
-    title: "Opinionated Structure",
-    description:
-      "Clean, scalable folder structure following modern frontend conventions.",
-    icon: WrenchScrewdriverIcon,
-  },
-  {
-    title: "Great Developer Experience",
-    description:
-      "ESLint, fast HMR, clean scripts, and sensible defaults.",
-    icon: RocketLaunchIcon,
-  },
+{
+  title: "Animation Support",
+  description:
+    "Framer Motion and GSAP support for smooth, modern UI animations.",
+  icons: [SiFramer, SiGreensock],
+},
+{
+  title: "Backend Integrations",
+  description:
+    "Instantly integrate backend services such as Supabase, Firebase, Appwrite, and PocketBase to power authentication, databases, and APIs.",
+  icons: [SiSupabase, SiFirebase, SiAppwrite, SiPocketbase],
+},
+// {
+//   title: "Svelte Support",
+//   description:
+//     "Create Svelte projects directly from the CLI with Tailwind, state management, and modern frontend tooling.",
+//   icon:SiSvelte,
+// },
   {
     title: "Production Ready",
     description:
@@ -124,7 +131,15 @@ export default function Home() {
               key={i}
               className="rounded-2xl border border-black/10 bg-zinc-50 p-6 transition hover:shadow-md"
             >
-              <feature.icon className="mb-4 h-8 w-8 text-black" />
+             {feature.icons ? (
+  <div className="flex gap-2 mb-4">
+    {feature.icons.map((Icon, idx) => (
+      <Icon key={idx} className="h-7 w-7 text-black" />
+    ))}
+  </div>
+) : (
+  <feature.icon className="mb-4 h-8 w-8 text-black" />
+)}
               <h3 className="mb-2 text-lg font-semibold">
                 {feature.title}
               </h3>

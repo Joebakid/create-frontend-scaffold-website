@@ -1,0 +1,119 @@
+export const FAQS = [
+{ question: "How do I install Create-Bawo?", answer: "Run: npx create-bawo-frontend my-app" },
+{ 
+  question: "Does Create-Bawo Frontend support backend services?", 
+  answer: "Yes. You can now scaffold projects with backend integrations like Supabase, Firebase, PocketBase, and Appwrite." 
+},
+
+{ 
+  question: "Do I need to install backend services manually?", 
+  answer: "No. Create-Bawo Frontend can generate the starter configuration for supported services so you can connect your project quickly." 
+},
+
+{ 
+  question: "Which backend services are supported?", 
+  answer: "Currently supported services include Supabase, Firebase, PocketBase, and Appwrite." 
+},
+
+{ 
+  question: "Can I use Create-Bawo without a backend?", 
+  answer: "Yes. Backend integrations are optional. You can scaffold a pure frontend project if you prefer." 
+},
+
+{ 
+  question: "What can I build with these backend integrations?", 
+  answer: "You can easily build full-stack apps with authentication, databases, storage, and APIs using services like Supabase, Firebase, PocketBase, and Appwrite." 
+},
+
+{ 
+  question: "Is backend integration automatic?", 
+  answer: "Create-Bawo can generate the starter files and dependencies, but you will still need to provide your project credentials or API keys." 
+},
+{ question: "How do I start a project after installing Create-Bawo?", answer: "Run cd my-app then npm install and npm run dev." },
+{ question: "What frameworks does Create-Bawo support?", answer: "React, Next.js, Vue and Svelte." },
+{ question: "Does Create-Bawo support Tailwind CSS?", answer: "Yes. You can choose Tailwind during project setup." },
+{ question: "Which Tailwind versions are supported?", answer: "Tailwind v3 and Tailwind v4." },
+{ question: "Can Create-Bawo scaffold a React project?", answer: "Yes. React + Vite projects are supported." },
+{ question: "Can Create-Bawo scaffold a Vue project?", answer: "Yes. Vue 3 + Vite is supported." },
+{ question: "Can Create-Bawo scaffold a Svelte project?", answer: "Yes. Svelte support is currently experimental." },
+{ question: "Does Create-Bawo support Next.js?", answer: "Yes. Next.js projects can be generated." },
+{ question: "What is Create-Bawo used for?", answer: "It scaffolds modern frontend projects with best practices." },
+{ question: "Does Create-Bawo Vue steup supports state management?", answer: "Yes it does" },
+
+{ question: "Is Create-Bawo open source?", answer: "Yes. You can contribute to the project on GitHub." },
+{ question: "Where can I find the documentation?", answer: "Visit the Docs page on the website." },
+{ question: "How do I contribute to Create-Bawo?", answer: "Visit the Contribute page and follow the guidelines." },
+{ question: "Does Create-Bawo support state management?", answer: "Yes. Multiple state management options are available." },
+{ question: "What state management libraries are supported?", answer: "Redux, Context API, React Query, RTK Query and SWR." },
+{ question: "Does Create-Bawo support animations?", answer: "Yes. GSAP and Framer Motion are supported." },
+{ question: "How do I enable GSAP animations?", answer: "Select GSAP during the CLI setup." },
+{ question: "How do I enable Framer Motion?", answer: "Select Framer Motion when prompted during project creation." },
+{ question: "Does Create-Bawo include SEO setup?", answer: "Yes. SEO files can be automatically generated." },
+{ question: "What SEO features are included?", answer: "Meta tags, Open Graph setup and SEO helpers." },
+
+{ question: "Does Create-Bawo support fonts?", answer: "Yes. Font support was introduced in v3.4.0." },
+{ question: "What font system does Create-Bawo use?", answer: "A built-in font registry and installer." },
+{ question: "Can fonts be automatically injected into Tailwind?", answer: "Yes. Font configuration is handled automatically." },
+{ question: "Does Create-Bawo generate configuration files?", answer: "Yes. It generates .gitignore, README, .env and more." },
+{ question: "Does Create-Bawo create a README file?", answer: "Yes. A default README is generated automatically." },
+{ question: "Does Create-Bawo configure Prettier?", answer: "Yes. Formatting configuration can be generated." },
+{ question: "Does Create-Bawo configure editor settings?", answer: "Yes. .editorconfig can be generated." },
+{ question: "Is shadcn UI supported?", answer: "Yes. shadcn setup is supported." },
+{ question: "Does Create-Bawo automatically configure shadcn?", answer: "Yes. Installation and configuration can be automated." },
+{ question: "Does Create-Bawo work with Vite?", answer: "Yes. Vite is used for fast development." },
+
+{ question: "Can Create-Bawo create production-ready apps?", answer: "Yes. It generates scalable project structures." },
+{ question: "Is Create-Bawo beginner friendly?", answer: "Yes. The CLI guides users through the setup." },
+{ question: "Does Create-Bawo require Node.js?", answer: "Yes. Node.js is required to run the CLI." },
+{ question: "What Node version should I use?", answer: "Use a modern LTS version of Node.js." },
+{ question: "How do I update Create-Bawo?", answer: "Install the latest version from npm." },
+{ question: "Where is Create-Bawo published?", answer: "It is available on npm." },
+{ question: "Does Create-Bawo support TypeScript?", answer: "Yes. TypeScript can be enabled during setup." },
+{ question: "Does Create-Bawo support JavaScript projects?", answer: "Yes. You can choose JavaScript or TypeScript." },
+{ question: "Can I use Tailwind without additional setup?", answer: "Yes. Tailwind is preconfigured." },
+{ question: "Does Create-Bawo configure PostCSS?", answer: "Yes. PostCSS configuration is included." },
+
+{ question: "Can Create-Bawo generate scalable project structures?", answer: "Yes. Projects are organized for maintainability." },
+{ question: "Does Create-Bawo reduce manual setup?", answer: "Yes. Many configurations are automated." },
+{ question: "Does Create-Bawo support modern frontend tooling?", answer: "Yes. It uses modern frameworks and build tools." },
+{ question: "Does Create-Bawo configure routing?", answer: "Yes. Starter templates include routing setup." },
+{ question: "Does Create-Bawo help with developer experience?", answer: "Yes. It focuses heavily on DX improvements." },
+{ question: "Is Create-Bawo suitable for production apps?", answer: "Yes. It generates production-ready structures." },
+{ question: "Can I customize the generated project?", answer: "Yes. You can modify any generated files." },
+{ question: "Does Create-Bawo generate starter components?", answer: "Yes. Basic starter components are included." },
+{ question: "Does Create-Bawo configure Tailwind content paths?", answer: "Yes. They are configured automatically." },
+{ question: "Does Create-Bawo support component libraries?", answer: "Yes. UI libraries like shadcn can be integrated." },
+
+{ question: "Does Create-Bawo support CLI prompts?", answer: "Yes. The CLI asks questions during setup." },
+{ question: "Can I skip prompts with flags?", answer: "Yes. CLI flags allow automated setup." },
+{ question: "Is Create-Bawo fast to run?", answer: "Yes. Project scaffolding is quick." },
+{ question: "Can Create-Bawo generate configuration defaults?", answer: "Yes. Sensible defaults are included." },
+{ question: "Does Create-Bawo help organize project folders?", answer: "Yes. It generates structured directories." },
+{ question: "Does Create-Bawo support environment variables?", answer: "Yes. .env files can be generated." },
+{ question: "Does Create-Bawo support code formatting?", answer: "Yes. Formatting tools can be configured." },
+{ question: "Does Create-Bawo configure dependencies automatically?", answer: "Yes. Required packages are installed." },
+{ question: "Does Create-Bawo support modular project architecture?", answer: "Yes. Projects are structured for modular development." },
+{ question: "Does Create-Bawo support scalable frontend development?", answer: "Yes. It is designed for scalable apps." },
+
+{ question: "Does Create-Bawo help with rapid prototyping?", answer: "Yes. It allows developers to start quickly." },
+{ question: "Does Create-Bawo include modern frontend patterns?", answer: "Yes. Best practices are included." },
+{ question: "Does Create-Bawo support modern CSS tooling?", answer: "Yes. Tailwind and PostCSS are supported." },
+{ question: "Does Create-Bawo improve developer productivity?", answer: "Yes. Automation reduces manual work." },
+{ question: "Does Create-Bawo support frontend experimentation?", answer: "Yes. Developers can experiment easily." },
+{ question: "Does Create-Bawo support modern JavaScript features?", answer: "Yes. Modern syntax and tooling are supported." },
+{ question: "Does Create-Bawo work well with Git?", answer: "Yes. Git configuration files are generated." },
+{ question: "Does Create-Bawo include sensible defaults?", answer: "Yes. Default configurations are optimized." },
+{ question: "Does Create-Bawo support frontend developers?", answer: "Yes. It is built specifically for frontend workflows." },
+{ question: "Does Create-Bawo simplify project setup?", answer: "Yes. That is the main goal of the CLI." },
+
+{ question: "What problem does Create-Bawo solve?", answer: "It removes repetitive project setup tasks." },
+{ question: "Why should I use Create-Bawo?", answer: "It helps you start frontend projects faster." },
+{ question: "Does Create-Bawo generate production-ready templates?", answer: "Yes. Templates are optimized for real projects." },
+{ question: "Does Create-Bawo include CLI improvements over time?", answer: "Yes. Each release improves developer experience." },
+{ question: "Does Create-Bawo support future framework updates?", answer: "Yes. New features will be added over time.[angular(coming soon)]" },
+{ question: "Is Create-Bawo under active development?", answer: "Yes. New versions continue to be released." },
+{ question: "Can beginners use Create-Bawo easily?", answer: "Yes. The CLI is beginner friendly." },
+{ question: "Does Create-Bawo help reduce configuration errors?", answer: "Yes. Automation helps prevent common mistakes." },
+{ question: "Can Create-Bawo help teams standardize projects?", answer: "Yes. It provides consistent project structures." },
+{ question: "Does Create-Bawo focus on modern frontend standards?", answer: "Yes. It follows modern frontend best practices." }
+];

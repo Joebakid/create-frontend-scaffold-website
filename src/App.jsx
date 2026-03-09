@@ -3,6 +3,7 @@ import { Analytics } from "@vercel/analytics/react";
 
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
+import BawoAssistant from "./components/BawoAssistant";
 
 import Home from "./pages/Home";
 import Docs from "./pages/Docs";
@@ -13,8 +14,7 @@ import NotFound from "./pages/NotFound";
 import ReleaseNotes from "./pages/ReleaseNote";
 import Contribute from "./pages/Contribute";
 import Support from "./pages/Support";
-import Node from './pages/node'
-
+import Node from "./pages/node";
 
 export default function App() {
   return (
@@ -29,15 +29,20 @@ export default function App() {
           <Route path="/docs/installation" element={<Installation />} />
           <Route path="/docs/usage" element={<Usage />} />
           <Route path="/docs/tailwind" element={<Tailwind />} />
+          <Route path="/docs/node" element={<Node />} />
+
           <Route path="/releasenotes" element={<ReleaseNotes />} />
           <Route path="/contribute" element={<Contribute />} />
           <Route path="/support" element={<Support />} />
-          <Route path="/docs/node" element={<Node />} />
+
           <Route path="*" element={<NotFound />} />
         </Routes>
       </main>
 
       <Footer />
+
+      {/* Bawo FAQ Assistant */}
+      <BawoAssistant />
 
       {/* Vercel Analytics */}
       <Analytics />

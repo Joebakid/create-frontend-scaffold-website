@@ -1,11 +1,42 @@
 import { useState } from "react";
 
 const releaseNotes = [
-
+{
+  id: "v3.5.0-dev-experience",
+  title: "create-bawo-frontend v3.5.0",
+  date: "March 2026",
+  content: {
+    scaffold: [
+      "Improved SEO setup system for generated projects",
+      "Stabilized shadcn UI installation and configuration",
+      "Added experimental Svelte scaffolding support",
+      "Added automatic generation of project configuration files (.gitignore, .env, README, .editorconfig, prettier)",
+      "Added backend integrations: Supabase, Firebase, PocketBase, and Appwrite"
+    ],
+    dx: [
+      "Better out-of-the-box SEO support across frameworks",
+      "More stable shadcn setup with fewer installation errors",
+      "Svelte projects can now be scaffolded through the CLI (Beta)",
+      "Projects start with sensible defaults for repository configuration and formatting",
+      "Developers can now easily connect their frontend projects to Supabase, Firebase, PocketBase, or Appwrite during scaffolding"
+    ],
+    fixes: [
+      "Improved reliability of shadcn UI setup",
+      "Resolved edge cases in SEO file generation",
+      "Minor improvements to framework scaffolding consistency"
+    ],
+    notes: [
+      "Svelte support is currently in beta",
+      "Some features may evolve as Svelte support stabilizes",
+      "Recommended for experimentation while the ecosystem support improves",
+      "Backend integrations generate starter configuration files to simplify setup"
+    ]
+  }
+},
 
   {
   id: "v3.4.0-beta-fonts",
-  title: "create-bawo-frontend v3.4.0 (Font Support — Beta)",
+  title: "create-bawo-frontend v3.4.0 ",
   date: "January 2026",
   content: {
     scaffold: [
