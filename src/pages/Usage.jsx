@@ -358,7 +358,7 @@ npx create-bawo-frontend my-app --framer --gsap`}
             A fast Vue 3 setup with TypeScript, Tailwind CSS, and GSAP for animations.
           </p>
           <CodeBlock
-            code="npx create-bawo-frontend my-vue-app --framework vue --ts --tailwind v3 --gsap -y"
+            code="npx create-bawo-frontend my-vue-app --framework vue --ts --tailwind v3 --gsap --supabase -y"
           />
           <p className="mt-7 text-gray-600 font-semibold">
             Note: Vue does not support framer and tailwind v4 yet.

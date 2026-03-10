@@ -1,6 +1,7 @@
-import { Routes, Route } from "react-router-dom";
+import { Routes, Route, useLocation } from "react-router-dom";
 import { Analytics } from "@vercel/analytics/react";
 
+import RouteTransition from "./animations/RouteTransition";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 import BawoAssistant from "./components/BawoAssistant";
@@ -17,26 +18,30 @@ import Support from "./pages/Support";
 import Node from "./pages/node";
 
 export default function App() {
+  const location = useLocation();
+
   return (
-    <div className="min-h-dvh flex flex-col bg-gray-100 font-sans">
+    <div className="min-h-dvh flex flex-col bg-[var(--app-bg)] font-sans text-[var(--app-text)]">
       <Navbar />
 
       <main className="flex-1">
-        <Routes>
-          <Route path="/" element={<Home />} />
+        <RouteTransition key={location.pathname}>
+          <Routes location={location} key={location.pathname}>
+            <Route path="/" element={<Home />} />
 
-          <Route path="/docs" element={<Docs />} />
-          <Route path="/docs/installation" element={<Installation />} />
-          <Route path="/docs/usage" element={<Usage />} />
-          <Route path="/docs/tailwind" element={<Tailwind />} />
-          <Route path="/docs/node" element={<Node />} />
+            <Route path="/docs" element={<Docs />} />
+            <Route path="/docs/installation" element={<Installation />} />
+            <Route path="/docs/usage" element={<Usage />} />
+            <Route path="/docs/tailwind" element={<Tailwind />} />
+            <Route path="/docs/node" element={<Node />} />
 
-          <Route path="/releasenotes" element={<ReleaseNotes />} />
-          <Route path="/contribute" element={<Contribute />} />
-          <Route path="/support" element={<Support />} />
+            <Route path="/releasenotes" element={<ReleaseNotes />} />
+            <Route path="/contribute" element={<Contribute />} />
+            <Route path="/support" element={<Support />} />
 
-          <Route path="*" element={<NotFound />} />
-        </Routes>
+            <Route path="*" element={<NotFound />} />
+          </Routes>
+        </RouteTransition>
       </main>
 
       <Footer />

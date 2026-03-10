@@ -3,14 +3,4 @@
 @import "@fontsource/inter/500.css";
 @import "@fontsource/inter/600.css";
 @import "@fontsource/inter/700.css";
-
-/* Tailwind v4 theme token */
-@theme {
-  --font-sans: "Inter", system-ui, sans-serif;
-}
-
-@layer base {
-  body {
-    @apply font-sans;
-  }
-}
+@import "../theme/theme.css";

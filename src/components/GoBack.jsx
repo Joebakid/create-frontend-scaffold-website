@@ -7,7 +7,7 @@ export default function GoBack() {
   return (
     <button
       onClick={() => navigate(-1)}
-      className="flex items-center cursor-pointer justify-center mb-10 gap-2 text-sm font-medium text-gray-600 hover:text-black transition"
+      className="mb-10 flex cursor-pointer items-center justify-center gap-2 text-sm font-medium text-[var(--app-muted)] transition hover:text-[var(--app-text)]"
     >
       <FiArrowLeft size={16} />
       Back

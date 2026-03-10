@@ -7,19 +7,13 @@ import { FaReact, FaVuejs } from "react-icons/fa";
 import { SiNextdotjs } from "react-icons/si";
 import { SiTailwindcss } from "react-icons/si";
 import { SiSupabase, SiFirebase, SiAppwrite, SiPocketbase } from "react-icons/si";
-import { SiFramer, SiGreensock } from "react-icons/si";
+import { SiFramer, SiGreensock, SiRedux, SiReactquery, SiSwr, SiPinia } from "react-icons/si";
 import {
   BoltIcon,
   CubeIcon,
-  AdjustmentsHorizontalIcon,
-  RocketLaunchIcon,
-  SparklesIcon,
-  SquaresPlusIcon,
-  WrenchScrewdriverIcon,
   CloudArrowUpIcon,
   PlayIcon,
   XMarkIcon,
-  // WrenchScrewdriverIcon,
 } from "@heroicons/react/24/solid";
 
 const features = [
@@ -44,8 +38,8 @@ const features = [
   {
     title: "State Management Included",
     description:
-      "Optional Zustand or Redux Toolkit setup for scalable global state.",
-    icon: SquaresPlusIcon,
+      "Choose Zustand, Redux Toolkit and RTK Query, Pinia, React Query, SWR, or Context API depending on the framework and data flow you need.",
+    icons: [CubeIcon, SiRedux, SiPinia, SiReactquery, SiSwr, FaReact],
   },
 {
   title: "Animation Support",
@@ -84,7 +78,7 @@ export default function Home() {
           create-bawo-frontend
         </h1>
 
-        <p className="mt-6 text-md sm:text-xl text-gray-600 max-w-2xl">
+        <p className="mt-6 max-w-2xl text-md text-[var(--app-muted)] sm:text-xl">
           A zero-config CLI to scaffold modern React (Vite), Next.js, and Vue apps with Tailwind CSS, state management, animations, and best practices.
         </p>
 
@@ -92,16 +86,16 @@ export default function Home() {
         <div className="my-10 flex-col flex sm:flex-row items-center gap-4">
           <button
             onClick={() => setVideoOpen(true)}
-            className="border px-5 py-1.5 rounded-lg flex items-center gap-2.5 hover:bg-gray-50 cursor-pointer"
+            className="flex cursor-pointer items-center gap-2.5 rounded-lg border border-[var(--app-border)] bg-[var(--app-surface-strong)] px-5 py-1.5 text-[var(--app-text)] hover:bg-[var(--app-hover)]"
           >
             What is create-bawo-frontend
-            <PlayIcon className="h-5 w-5 text-gray-500" />
+            <PlayIcon className="h-5 w-5 text-[var(--app-muted)]" />
           </button>
 
 <div className="flex space-x-5 justify-center items-center">
- <Link
+	 <Link
             to="/docs/installation"
-            className=" px-2 py-1.5 bg-black text-white rounded-lg"
+            className="rounded-lg bg-[var(--app-accent)] px-2 py-1.5 text-[var(--app-accent-contrast)] shadow-[var(--app-shadow)]"
           >
             Get Started
           </Link>
@@ -110,7 +104,7 @@ export default function Home() {
             href="https://github.com/Joebakid/create-bawo-frontend"
             target="_blank"
             rel="noreferrer"
-            className=" px-2 py-1  border rounded-lg"
+            className="rounded-lg border border-[var(--app-border)] bg-[var(--app-surface-strong)] px-2 py-1 text-[var(--app-text)] hover:bg-[var(--app-hover)]"
           >
             GitHub
           </a>
@@ -118,9 +112,9 @@ export default function Home() {
          
         </div>
 
-        <pre className="mt-12 bg-zinc-900 rounded-lg">
+        <div className="mt-12">
           <CodeBlock code="npx create-bawo-frontend my-app" />
-        </pre>
+        </div>
       </section>
 
       {/* FEATURES */}
@@ -129,21 +123,22 @@ export default function Home() {
           {features.map((feature, i) => (
             <div
               key={i}
-              className="rounded-2xl border border-black/10 bg-zinc-50 p-6 transition hover:shadow-md"
+              data-animate-card
+              className="rounded-2xl border border-[var(--app-border)] bg-[var(--app-surface)] p-6 text-[var(--app-text)] shadow-[0_10px_24px_rgba(15,23,42,0.06)] transition hover:-translate-y-0.5 hover:bg-[color-mix(in_srgb,var(--app-surface)_88%,var(--app-hover))]"
             >
              {feature.icons ? (
-  <div className="flex gap-2 mb-4">
+              <div className="mb-4 flex flex-wrap items-center gap-3">
     {feature.icons.map((Icon, idx) => (
-      <Icon key={idx} className="h-7 w-7 text-black" />
+      <Icon key={idx} className="h-7 w-7 shrink-0" />
     ))}
   </div>
 ) : (
-  <feature.icon className="mb-4 h-8 w-8 text-black" />
+  <feature.icon className="mb-4 h-8 w-8" />
 )}
               <h3 className="mb-2 text-lg font-semibold">
                 {feature.title}
               </h3>
-              <p className="text-sm text-gray-600 leading-relaxed">
+              <p className="text-sm leading-relaxed text-[var(--app-muted)]">
                 {feature.description}
               </p>
             </div>

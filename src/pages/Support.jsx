@@ -17,7 +17,7 @@ export default function Support() {
         Support the Project
       </h1>
 
-      <p className="mt-4 text-gray-600 leading-relaxed">
+      <p className="mt-4 leading-relaxed text-[var(--app-muted)]">
         Everyone is an artist until it’s time to pay the bills.
         <br /><br />
         <strong>create-bawo-frontend</strong> is built and maintained independently,
@@ -37,19 +37,19 @@ export default function Support() {
       </p>
 
       {/* SUPPORT BOX */}
-      <div className="mt-8 rounded-xl border bg-white px-5 py-6 space-y-4">
-        <p className="text-sm text-gray-500">
+      <div className="mt-8 space-y-4 rounded-xl border border-[var(--app-border)] bg-[var(--app-surface-strong)] px-5 py-6">
+        <p className="text-sm text-[var(--app-muted)]">
           Send support to this address (Ethereum / Base / any EVM network):
         </p>
 
-        <div className="flex items-center justify-between gap-3 rounded-lg border px-4 py-3 bg-gray-50">
-          <span className="font-mono text-sm break-all text-gray-800">
+        <div className="flex items-center justify-between gap-3 rounded-lg border border-[var(--app-border)] bg-[var(--app-surface)] px-4 py-3">
+          <span className="break-all font-mono text-sm text-[var(--app-text)]">
             {RECEIVER_ADDRESS}
           </span>
 
           <button
             onClick={copyAddress}
-            className="shrink-0 text-sm px-3 py-1.5 rounded-md border bg-white hover:bg-gray-100"
+            className="shrink-0 rounded-md border border-[var(--app-border)] bg-[var(--app-surface-strong)] px-3 py-1.5 text-sm text-[var(--app-text)] hover:bg-[var(--app-hover)]"
           >
             {copied ? "Copied ✓" : "Copy"}
           </button>
@@ -59,7 +59,7 @@ export default function Support() {
       </div>
 
       {/* FOOTNOTE */}
-      <p className="mt-6 text-sm text-gray-500">
+      <p className="mt-6 text-sm text-[var(--app-muted)]">
         Contributions are optional and do not grant ownership or privileges.
         Supported networks: Ethereum, Base, and other EVM-compatible chains.
       </p>
