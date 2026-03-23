@@ -5,7 +5,7 @@ export default function Footer() {
         <p>
           © {new Date().getFullYear()}{" "}
           <a
-            href="https://www.josephbawo.tech"
+            href="https://joebakid.eth.limo/"
             target="_blank"
             rel="noopener noreferrer"
             className="font-medium hover:text-[var(--app-text)] hover:underline"
